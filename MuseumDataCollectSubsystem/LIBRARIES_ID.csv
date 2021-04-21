@@ -1,1 +1,207 @@
-
+博物馆信息统计(找不到内容的填NULL)								
+Num(用于标识，留空)	M_Cname(中文名）	M_Ename(英文名)	M_Batch(批次）	Province(所属省份)	M_Address(地址)	M_web(官网）	微信公众号	备注
+10101	故宫博物院	The Palace Museum	1	北京	北京市东城区景山前街4号	https://www.dpm.org.cn/Home.html		
+10102	中国科学技术馆	China Science and Technology Museum	1	北京	北京市朝阳区北辰东路5号	https://cstm.cdstm.cn/		
+10103	中国地质博物馆	The Geological Museum of China	1	北京	北京市西城区西四羊肉胡同15号	http://www.gmc.org.cn/		
+10104	中国人民革命军事博物馆	Military Museum of the Chinese Peoples Revolution	1	北京	北京市海淀区复兴路9号	http://www.jb.mil.cn/		
+10105	中国航空博物馆	China Aviation Museum	1	北京	北京市昌平区小汤山镇顺沙路	http://jz.chinamil.com.cn/datajzb/hb/	北京本地宝（回复”航空“）：bdbbeijing	官网目前打不开，地址信息不明，无专属公众号，但可在北京本地宝发“航空”获取一些信息。
+10106	北京鲁迅博物馆/北京新文化运动纪念馆	Beijing Luxun Museum and The New Culture Movement Memorial of Beijing	1	北京	北京市西城区阜成门内大街宫门口二条19号/北京市东城区五四大街29号	http://www.luxunmuseum.com.cn/		两个名称可能是并列关系
+10107	首都博物馆	Capital Museum	1	北京	北京市西城区复兴门外大街16号	http://www.capitalmuseum.org.cn/index.htm		
+10108	北京自然博物馆	Beijing Museum of Natural History	1	北京	北京市东城区天桥南大街126号	http://www.bmnh.org.cn/		
+10109	中国人民抗日战争纪念馆	Museum of the War of Peoples Resistance Against Japanese Aggression	1	北京	北京市西南卢沟桥畔宛平城内街101号	http://www.1937china.com/kzjng/		
+10110	周口店北京人遗址博物馆	Zhoukoudian Peking Man Site Museum	1	北京	北京市房山区周口店大街1号	http://www.zkd.cn/	周口店北京人遗址博物馆：gh_39e22aa418b0	官网目前打不开，周口店北京人遗址博物馆是由周口店遗址博物馆和周口店遗址两部分组成，周口店遗址博物馆位于周口店遗址南侧约500米。（国家一级博物馆的词条给的名称似乎不准确，ps：给的是周口店遗址博物馆）
+10201	中国国家博物馆	National Museum of China	2	北京	北京东城区东长安街16号天安门广场东侧	http://chnmuseum.cn/		
+10202	全国农业展览馆/中国农业博物馆	National Agricultural Exhibition Center/China Agricultural Museum	2	北京	北京市朝阳区东三环北路16号	http://www.zgnybwg.com.cn/index.html		
+10301	北京天文馆	Beijing Planetarium	3	北京	北京西直门外大街138号	http://www.bjp.org.cn/		
+10302	恭王府	Prince Kungs Palace Museum	3	北京	北京市西城区前海西街17号	http://www.pgm.org.cn/		
+10401	中国印刷博物馆	China Printing Museum	4	北京	北京市大兴区黄村兴华北路25号	http://www.printingmuseum.cn/Home/Index		
+10402	中国电影博物馆	China National Film Museum	4	北京	北京市朝阳区南影路9号	http://www.cnfm.org.cn/		
+10403	北京汽车博物馆	Beijing Auto Museum	4	北京	北京市丰台区南四环西路126号	http://www.automuseum.org.cn/		
+10404	清华大学艺术博物馆	Tsinghua University Art Museum	4	北京	北京市海淀区清华园1号	http://www.artmuseum.tsinghua.edu.cn/		
+20101	天津博物馆/天津文博院	Tianjin Museum	1	天津	天津市河西区平江道62号	https://www.tjbwg.com/cn/Index.aspx		
+20102	天津自然博物馆	Tianjin Natural History Museum	1	天津	友谊路31号，银河广场(近平江道)　	https://www.tjnhm.com/		
+20103	周恩来邓颖超纪念馆	The Memorial to Zhou Enlai and Deng Yingchao	1	天津	天津市南开区水上公园西路9号	http://www.mzhoudeng.com/home.aspx		
+20401	平津战役纪念馆	无	4	天津	天津市红桥区平津道8号	http://www.pjcmm.com/home.aspx		无官方英文名
+30101	河北博物院	Hebei Museum	1	河北	河北省石家庄市东大街4号	http://www.hebeimuseum.org.cn/		
+30102	西柏坡纪念馆	Xibaipo Memorial	1	河北	河北省石家庄市平山县西柏坡镇西柏坡村西柏坡景区内	http://www.xbpjng.cn/index.aspx		
+30301	邯郸市博物馆	Handan Museum	3	河北	河北省邯郸市人民东路399号邯郸文化艺术中心西侧	http://www.hdmuseum.org/		
+40101	山西博物院	Shanxi Museum	1	山西	山西省太原市滨河西路北段13号	http://www.shanximuseum.com/sx/index/index.html		
+40102	中国煤炭博物馆	The Coal Museum of China	1	山西	山西省太原市迎泽西大街2号 	http://www.coalmus.org.cn/		
+40103	八路军太行纪念馆	无	1	山西	山西省长治市武乡县太行街363号	http://www.balujun.cn/		无官方英文名
+40401	大同市博物馆	Datong Museum	4	山西	大同市御东太和路	http://www.datongmuseum.com/	大同市博物馆：datongmuseum	官网目前打不开，地址信息不明
+40402	山西地质博物馆	ShanXi Museum of Geology	4	山西	山西省太原市滨河西路北段17号	http://www.sxgm.org/home/index/index.html		
+40403	临汾市博物馆	Linfen Museum	4	山西	山西省临汾市滨河西路九州广场南端	http://www.linfenmuseum.com/		
+50101	内蒙古博物院	lnner Mongolia Museum	1	内蒙古	内蒙古呼和浩特市新城区新华东街27号	http://www.nmgbwy.com/	内蒙古博物院：nmgbwy	官网目前打不开，公众号处于调试阶段，无法提供服务。
+50301	鄂尔多斯博物馆	Ordos Museum	3	内蒙古	内蒙古鄂尔多斯市康巴什区文化西路5号	http://ordosbwg.org.cn/		
+50401	赤峰博物馆	无	4	内蒙古	内蒙古赤峰市新城区富河街10A	http://www.cfbwg.org.cn/		官网英文版打不开404（中文可）
+60101	辽宁省博物馆	Liaoning Provincial Museum	1	辽宁	辽宁省沈阳市浑南区智慧三街157号	http://www.lnmuseum.com.cn/		
+60102	“九·一八”历史博物馆	The 9.18 Historical Museum	1	辽宁	辽宁省沈阳市大东区望花南街46号	http://918museum.org.cn/		
+60103	旅顺博物馆	Lvshun Museum	1	辽宁	辽宁省大连市旅顺口区列宁街42号	http://lvshunmuseum.org/		
+60301	沈阳故宫博物院	The Shenyang Palace Museum	3	辽宁	辽宁省沈阳市沈河区沈阳路171号	http://www.sypm.org.cn/		
+60302	大连博物馆	Dalian Museum	3	辽宁	辽宁省大连市沙河口区会展路10号	https://www.dlmodernmuseum.com/		
+60401	大连自然博物馆	Dalian Natural History Museum	4	辽宁	辽宁省大连市沙河口区黑石礁西村街40号（星海公园西侧）	http://www.dlnm.org.cn/		
+70101	吉林省自然博物馆/东北师范大学自然博物馆	Jilin Province Museum of Natural History/Northeast Normal University Museum of Natural History	1	吉林	吉林省长春市净月大街2556号东北师范大学自然博物馆（东北师范大学净月校区东门对面）	http://museum.nenu.edu.cn/		
+70201	吉林省博物院	Jilin Provincal Museum	2	吉林	吉林省长春市净月国家高新技术产业开发区永顺路1666号	http://www.jlmuseum.org/		
+70301	伪满皇宫博物院	Palace Museum of The Manchurian Regime	3	吉林	吉林省长春市陕西路与光复北路交汇向东100米	https://www.wmhg.com.cn/index.html		
+80101	东北烈士纪念馆	NULL	1	黑龙江	哈尔滨市南岗区一曼街241号	http://www.jn1948.cn/index.php?g=Portal&m=Party&a=index	东北烈士纪念馆：gh_a95b66f959c4	首页网站升级中（没说什么时候好）编办备案馆和内设馆有东北抗联博物馆/中共黑龙江历史纪念馆/伪满洲国哈尔滨警察厅旧址陈列馆
+80102	铁人王进喜纪念馆	NULL	1	黑龙江	黑龙江省大庆市让胡路区中原路2号	NULL	铁人王进喜纪念馆：wjxjng	资料来源百度，未找到官网
+80103	瑷珲历史陈列馆	Aihui History Museum	1	黑龙江	黑龙江省黑河市瑷珲镇萨布素街	http://www.aihuihistorymuseum.org.cn/index.aspx		
+80204	黑龙江省博物馆	Museum of Heilongjiang Province	2	黑龙江	哈尔滨市南岗区红军街64号	http://www.hljmuseum.com/	黑龙江省博物馆互动平台：hljsbwghdpt	
+80305	大庆市博物馆	NULL	3	黑龙江	大庆市高新开发区文苑街2号	http://www.dqsbwg.com/	大庆市博物馆：dqsbwg	有微信公众号查的官网，打不开
+80406	黑龙江省民族博物馆	NULL	4	黑龙江	黑龙江哈尔滨市文庙街25号	http://www.hljsmzbwg.com/		
+90101	上海博物馆	Shanghai Museum	1	上海	上海市黄浦区人民大道201号	https://www.shanghaimuseum.net/mu/frontend/pg/index		
+90102	上海鲁迅纪念馆	Shanghai Lu Xun  Museum/Shanghai LuXun Museum	1	上海	上海市虹口区甜爱路200号甜爱路200号鲁迅公园内	http://www.luxunmuseum.cn/		
+90103	中国共产党第一次全国代表大会会址纪念馆	Site of the first National Congress of the Communist Party of China	1	上海	上海市黄浦区黄陂南路374号	http://www.zgyd1921.com/zgyd/node3/index.html		
+90204	上海科技馆	Shanghai Science & Technology Museum	2	上海	中国上海市浦东新区世纪大道2000号	http://www.sstm.org.cn/		
+90305	陈云纪念馆	Shen Yun Memorial	3	上海	上海市青浦区练塘镇老朱枫公路3516号	http://www.cyjng.net/		
+90406	中国航海博物馆	China Maritime Museum	4	上海	上海市浦东新区临港新城申港大道197号（近滴水湖）	https://www.shmmc.com.cn/		
+90407	上海市龙华烈士陵园/龙华烈士纪念馆	Longhua Martyr Cemetery of Shanghai	4	上海	上海市龙华西路180号	https://www.slmmm.com/		
+100101	南京博物院	Nanjing Museum	1	江苏	江苏省南京市玄武区中山东路321号	http://www.njmuseum.com/zh		
+100102	侵华日军南京大屠杀遇难同胞纪念馆	The Memorial Hall of the Victims in Nanjing Massacre by Japanese Invaders	1	江苏	南京市水西门大街418号	http://www.19371213.com.cn/		
+100103	南通博物苑	Nantong Museum	1	江苏	南通市濠南路19号	http://www.ntmuseum.com/		
+100104	苏州博物馆	Suzhou Museum	1	江苏	苏州市东北街204号	https://www.szmuseum.com/		
+100105	扬州博物馆/扬州中国雕版印刷博物馆	China Block Printing Museum at Yangzhou  · Yangzhou Museum	1	江苏	扬州市邗江区文昌西路468号（明月湖西侧）	https://www.yzmuseum.com/		
+100306	常州博物馆	Changzhou Museum	3	江苏	常州市新北区龙城大道1288号	http://www.czmuseum.com/index		
+100307	南京市博物总馆	Nanjing Museum Administration	3	江苏	南京市博物馆·朝天宫：南京市秦淮区朝天宫4号(http://www.njmm.cn)/太平天国历史博物馆：南京市秦淮区瞻园路128号(http://www.tptgmuseum.com/)/中共代表团梅园新村纪念馆：南京市玄武区汉府街18号-1/南京市民俗（非遗）博物馆：南京市秦淮区南捕厅15号/渡江胜利纪念馆：南京市鼓楼区渡江路1号/江宁织造博物馆：南京市玄武区长江路123号/六朝博物馆：南京市玄武区长江路302号(http://liuchao.njmuseumadmin.com)/南京市文化遗产保护研究所：南京市秦淮区朝天宫4号	http://www.njmuseumadmin.com/		南京市博物馆总馆汇聚南京市博物馆、太平天国历史博物馆、中国共产党代表团梅园新村纪念馆、南京市民俗博物馆、渡江胜利纪念馆、江宁织造博物馆、六朝博物馆、南京市文化遗产保护研究所8家市属文博馆所，部分博物子馆有官网
+100408	南京中国科举博物馆	Nanjing Imperial Examination Museum of China	4	江苏	南京市秦淮区金陵路1号	http://www.njiemuseum.com/		
+100409	南京雨花台烈士纪念馆/南京雨花台烈士陵园	Yuhuatai Scenic Area 	4	江苏	中国南京雨花台区雨花路215号	http://hsb.travel-yuhuatai.com/		
+100410	无锡博物院	Wuxi Museum	4	江苏	江苏无锡南长区钟书路100号	http://www.wxmuseum.com/Home/Index		
+100411	徐州博物馆/徐州市文物考古研究所	Xuzhou Museum/The Institute of Cultural Relics and Archaeology	4	江苏	江苏省徐州市和平路118号	https://www.xzmuseum.com/	徐州博物馆：xzmuseum	
+100412	常熟博物馆	Changshu Museum	4	江苏	江苏省常熟市北门大街1号	http://changshubowuguan.meishujia.cn/	常熟博物馆：csmuseum	疑似主页
+100413	镇江博物馆	Zhenjiang Museum	4	江苏	镇江市伯先路85号	http://www.zj-museum.com.cn/zjbwg/zjbwg/index.html		
+110101	浙江省博物馆	Zhejiang Provincial Museum	1	浙江	浙江省 杭州市 孤山路25号	http://www.zhejiangmuseum.com/		
+110202	浙江自然博物院	Zhejiang Museum of Natural History AnJi Branch	2	浙江	浙江省杭州市下城区朝晖街道西湖文化广场6号	http://www.zmnh.com/		
+110203	中国丝绸博物馆	China National Silk Museum	2	浙江	浙江省杭州市西湖区玉皇山路73-1号	http://www.chinasilkmuseum.com/		
+110204	宁波博物馆	Ningbo Museum	2	浙江	宁波市鄞州区首南中路1000号	http://www.nbmuseum.cn/		
+110305	杭州博物馆	Hangzhou Museum	3	浙江	浙江省杭州市上城区粮道山18号	http://www.hzmuseum.com/		
+110306	温州博物馆	Wenzhou Museum	3	浙江	浙江省温州市鹿城区市府路491号	http://www.wzmuseum.cn/		
+110407	西湖博物馆总馆	West Lake Museum	4	浙江	浙江省杭州市南山路89号	http://www.westlakemuseum.com/		
+110408	中国茶叶博物馆	China National Tea Museum	4	浙江	双峰馆区：龙井路88号/龙井馆区：翁家山268号	http://www.teamuseum.cn/		有两个馆区
+110409	杭州工艺美术博物馆	Hangzhou Arts and Crafts Museum	4	浙江	杭州工艺美术博物馆：杭州市拱墅区小河路334号/中国刀剪剑、伞博物馆：杭州市拱墅区小河路336号/中国扇博物馆：杭州市拱墅区小河路450号	http://www.zgdjss.com/#!/app/index		分为三个馆区
+110410	天一阁博物院	Tianyige Museum	4	浙江	宁波市海曙区天一街10号	http://www.tianyige.com.cn/		
+110411	中国港口博物馆	China Port Museum	4	浙江	浙江省宁波市北仑区春晓港博路6号	http://www.portmuseum.cn/		
+110412	南湖革命纪念馆	Nanhu Revolutionary Memorial Hall	4	浙江	浙江嘉兴市南湖区烟雨路七一广场	http://www.nanhujng.com/		
+110413	舟山博物馆	Zhoushan Museum	4	浙江	新城海天大道内侧舟山海洋文化艺术中心	https://www.zsbwg.com/#/		
+120101	安徽博物院	Anhui Museum	1	安徽	老馆：合肥市安庆路268号/新馆：合肥市怀宁路87号	https://www.ahm.cn/Home/Index		
+120302	中国徽州文化博物馆	China Huizhou Culture Museum	3	安徽	安徽省黄山市机场迎宾大道50号	http://www.hzwhbwg.com/		
+120403	安徽省地质博物馆	Anhui Geological Museum	4	安徽	安徽省合肥市政务区仙龙湖路999号	http://ahgm.org.cn/ahgm/ahgm/index.html		安徽古生物化石博物馆、安徽省古生物化石科学研究所
+120404	隋唐大运河博物馆/淮北市博物馆	Huaibei Museum/Sui Tang Da Yun He Museum	4	安徽	安徽省淮北市相山区博物馆路1号	http://www.hbbwg.net/?shouye.html		
+120405	宿州市博物馆	Suzhou Museum	4	安徽	安徽省宿州市埇桥区博物馆路1号	http://www.sz-museum.com/		与苏州博物馆同英文名
+120406	蚌埠市博物馆	Bengbu Museum	4	安徽	安徽省蚌埠市东海大道市民广场	https://www.ahbbmuseum.com/		
+130101	福建博物院	Fujian Museum	1	福建	福建省福州市鼓楼区湖头街96号	http://museum.fjsen.com/		
+130102	古田会议纪念馆	Site of the Gutian Conference	1	福建	福建省龙岩市上杭县古田镇古田路85号	http://www.gthyjng.com/		
+130103	福建省泉州海外交通史博物馆	Quanzhou Maritime Museum Fujian	1	福建	泉州市丰泽区东湖街425号	http://www.qzhjg.cn/html/index.html		
+130104	中国闽台缘博物馆	China Museum for Fujian Taiwan kinship	1	福建	福建泉州北清东路212号	http://www.mtybwg.org.cn/index.aspx		
+130305	中央苏区（闽西）历史博物馆	Central Soviet Area (Minxi) History	3	福建	福建省龙岩市北环西路51号	http://hsmxbwg.com/		
+140101	井冈山革命博物馆	Museum of Revolution in Jinggang Mountains	1	江西	江西省井冈山茨坪红军南路	http://www.jgsgmbwg.com/		
+140102	江西省博物馆	Jiangxi Provincial Museum	1	江西	江西省南昌市赣江北大道698号	http://www.jxmuseum.cn/Home/Index		
+140103	瑞金中央革命根据地纪念馆/瑞金中央革命根据地历史博物馆	Ruijin Revolutionary Memorial	1	江西	瑞金城西苏维埃纪念园内	http://www.rjjng.com.cn/treasure/		百度应用中官网，打不开且未搜到公众号
+140104	南昌八一起义纪念馆	Nanchang August 1st memorial Hall	1	江西	江西省南昌市中山路380号 南昌八一起义纪念馆	http://www.81-china.com/		
+140305	安源路矿工工人运动纪念馆	Memorial Hall of Railway Workers and CoalMiners	3	江西	"江西省萍乡市安源区安源镇安源路矿工工人运动纪念馆
+"	http://www.aymuseum.com/		
+140406	八大山人纪念馆	Badashanren Memorial Hall	4	江西	南昌市青云谱区青云谱路259号	http://www.bdsrjng.cn/home/index.htm		
+140407	九江市博物馆	Jiujiang Museum	4	江西	江西省九江市八里湖新区文博园内（胜利碑下）	http://www.jjmuseum.cn/lib/Index.html		找到了官网
+140408	江西省庐山博物馆	Lushan Museum	4	江西	江西省九江市庐山区牯岭东谷	http://www.lushanmuseum.com/		
+140409	赣州市博物馆	NULL	4	江西	中央苏区历史博物馆即赣州市红色文化馆：江西省赣州市章贡区兴国路15号/赣州市博物馆新馆:章江新区长宁路城市花园西侧	http://www.gzsbwg.cn/		
+140410	景德镇中国陶瓷博物馆	NULL	4	江西	江西省景德镇市昌江区紫晶北路1号	http://www.zgtcbwg.com/index.php?s=/home/article/page/id/39.html	景德镇中国陶瓷博物馆：jdztcbwg	微信公众号20150618，官网不稳定
+140411	萍乡博物馆	Pingxiang Museum	4	江西	江西省萍乡市安源区滨河东路376号	http://www.pxmuseum.com/		
+150101	青岛市博物馆	NULL	1	山东	中国山东省 青岛市崂山区梅岭东路51号	http://www.qingdaomuseum.com/	qdmuseum	
+150102	中国甲午战争博物馆	Jiawuzhanzheng.CN	1	山东	山东省威海市环翠区丁公路	http://www.jiawuzhanzheng.cn/		官网只有英文域名，地址来源于百度百科，官网只有一个通讯地址：威海市少年路2号（中国甲午战争博物馆学术研究中心）
+150103	青州博物馆	Qingzhou Museum	1	山东	山东省青州市范公亭西路1号	http://www.qingzhoumuseum.cn/		
+150201	山东博物馆	SHAN DONG MUSEUM	2	山东	济南市经十路11899号	http://www.sdmuseum.com/		
+150301	烟台市博物馆	Yantai Museum	3	山东	烟台市南大街61号	http://www.ytmuseum.com/		
+150302	潍坊市博物馆	WEIFANGMUSEUM	3	山东	:潍坊市东风东街6616号	http://www.wfsbwg.com/		
+150401	孔子博物馆	Confucius Museum	4	山东	山东省曲阜市孔子大道100号	http://www.kzbwg.cn/		地址来源与百度百科
+150402	济南市博物馆	Jinan City Museum	4	山东	山东省济南市经十一路30号	http://www.jnmuseum.com/#/		地址英文名均来自百度百科
+150403	济南市章丘区博物馆 / 章丘市博物馆	NULL	4	山东	山东省济南市章丘区清照路135号	NULL	ZQQBWG	地址和馆名来源与百度百科，馆名有争议：济南市章丘区博物馆 / 章丘市博物馆
+150404	山东大学博物馆	SHANDONG UNIVERSERITY MUSEUM	4	山东	山东省济南市山大南路27号山东大学中心校区知新楼A座	http://museum.sdu.edu.cn/		
+150405	青岛啤酒博物馆	NULL	4	山东	山东省青岛市 登州路56-1号	NULL	qdpjbwg	地址来源于百度
+150406	青岛山炮台遗址展览馆	NULL	4	山东	青岛市京山路26号	http://www.qdyzyzmuseum.com/	NULL	没有公众号
+150407	淄博市陶瓷博物馆	ZIBO CERAMICS MUSEUM	4	山东	山东省淄博市张店区华光路320号淄博市文化中心	http://www.zbstcbwg.cn/		
+150408	齐文化博物院	Qi Heritage Museum	4	山东	山东省淄博市临淄区临淄大道308号	http://www.qiheritagemuseum.com/		
+150409	滕州市博物馆	TENGZHOU MUSEUM	4	山东	滕州市龙泉广场	http://www.tengzhoumuseum.com/		
+150410	滕州汉画像石馆	Tengzhou Museum of Han Carved Stones 	4	山东	滕州市府前东路1号	http://www.tzhhxsg.com/		
+150411	济宁市博物馆	Jining Museum	4	山东	济宁市太白湖新区运河路140号	http://www.jiningmuseum.com/home.do		英文名来自百度百科
+150412	临沂市博物馆	LIN YI MUSEUM	4	山东	山东省临沂市博物馆（北城新区兰陵路）	http://museum.linyi.cn/		
+160101	河南博物院	HENAN MUSEUM	1	河南	中国•河南省郑州市农业路8号	http://www.chnmus.net/		
+160102	郑州博物馆	Zhengzhou Museum	1	河南	郑州市嵩山南路168号	http://www.hnzzmuseum.com/		英文名来自百度百科
+160103	洛阳博物馆	LUOYANG MUSEUM	1	河南	河南省洛阳市洛龙区聂泰路	http://www.lymuseum.com/		
+160104	南阳汉画馆	Nanyang Stone-carved art Museum in Han Dynasty	1	河南	南阳市卧龙区汉画街398号（卧龙区车站南路以西，卧龙路以南）	http://nyhhg.com/		
+160201	开封市博物馆	KAIFENG MUSEUM	3	河南	河南省开封市迎宾路26号（老馆）/ 河南省开封市郑开大道第六大街（新馆）	http://www.kfsbwg.com/		有新馆和旧馆，馆址已标出
+160202	鄂豫皖苏区首府革命博物馆	Revolution Museum of capital of Hubei, Henan, Anhui and Soviet Areas	3	河南	河南省信阳市新县首府路文博新村4号	http://www.eywsqsfbwg.com/		英文名来自百度百科
+160401	中国文字博物馆	National Museum of Chinese Writing	4	河南	安阳市人民大道东段	http://www.wzbwg.com/		
+160402	平顶山博物馆	PINGDINGSAHN MUSEUM	4	河南	平顶山市新城区长安大道与怀仁路交叉口平安广场西侧	http://www.pdsm.org.cn/		
+160403	安阳博物馆	Anyang Museum	4	河南	河南省安阳市文明大道436号两馆大楼西	http://www.aybwg.org/		英文名来自百度百科
+170107	湖北省博物馆 / 湖北省文物考古研究所	Hubei Museum	1	湖北	湖北省武汉市武昌区东湖路160号	http://www.hbww.org/home/Index.aspx		英文名来自百度百科
+170102	荆州博物馆	JINGZHOU MUSEUM	1	湖北	湖北省荆州市荆中路166号	http://www.jzmsm.org/		
+170103	武汉博物馆	WUHAN MUSEUM	1	湖北	武汉市江汉区青年路373号	http://www.whmuseum.com.cn/		
+170301	辛亥革命武昌起义纪念馆 / 辛亥革命研究所	Wuchang Uprising Memorial Hall of Xinhai Revolution	3	湖北	武汉市武昌区武珞路1号	http://wlt.hubei.gov.cn/1911museum/		英文名来自百度百科，两个馆名已标出
+170302	中山舰博物馆	Zhongshan Warship Museum	3	湖北	武汉市江夏区金口街中山舰路特1号	http://www.zhongshanwarship.org.cn/		英文名来自百度百科
+170401	武汉革命博物馆	the WuHan revolutionary museum	4	湖北	湖北省武汉市武昌区红巷13号	http://www.whgmbwg.com/		英文名来自百度百科
+170402	长江文明馆	The Changjiang Civilization Museum	4	湖北	湖北省武汉市园博园东路8号	http://www.changjiangcp.com/		
+170403	宜昌博物馆	YICHANG MUSEUM	4	湖北	湖北省宜昌市伍家岗区柏临河路	http://www.ycbwg.com/		
+170404	随州博物馆	SUIZHOU MUSEUM	4	湖北	随州市清河路二桥头	https://www.szbwg.net/		
+180101	湖南省博物馆	HUNAN MUSEUM	1	湖南	湖南省长沙市开福区东风路50号	http://www.hnmuseum.com/		
+180102	韶山毛泽东故居纪念馆	NULL	1	湖南	湖南省韶山市韶山冲	NULL	NULL	没有官网和公众号
+180103	刘少奇同志纪念馆 / 刘少奇故里管理局	NULL	1	湖南	湖南省长沙市宁乡市花明楼镇花明楼景区	http://www.shaoqiguli.com/	huamingloujingqu	疑似官网，且官网有两个馆名，已标出
+180301	长沙简牍博物馆	CHANGSAHO JIANDU MUSEUM	3	湖南	长沙市天心区白沙路92号	http://www.chinajiandu.cn/		
+180401	长沙博物馆	CHANGSAHO MUSEUM	4	湖南	湖南省长沙市开福区新河三角洲滨江文化园内 	http://www.csm.hn.cn/		
+180402	胡耀邦故居	Hu yaobang's former residence	4	湖南	湖南省浏阳市中和镇苍坊村敏溪河畔	NULL	huyaobangguli	无官网，英文名和地址均来自百度百科
+190101	广东省博物馆	GUANGDONG MUSEUM	1	广东	广东省广州市天河区珠江新城珠江东路2号	http://www.gdmuseum.com/		
+190102	西汉南越王博物馆	THE MUSEUM OF THE NANYUE KING MAUSOLEUM	1	广东	广州市解放北路867号	https://www.gznywmuseum.org/		英文名来自百度百科
+190103	孙中山故居纪念馆	THE MUSEUM OF DrRSUN YAT-SEN	1	广东	广东省中山市翠亨村	http://www.sunyat-sen.org/		
+190201	深圳博物馆	SHENZHEN MUSEUM	2	广东	见备注	https://www.shenzhenmuseum.com/		有四个分馆：历史民俗馆(福田区福中路市民中心A区)、深圳改革开放展览馆（深圳市福田区福中路184号（深圳市当代艺术与城市规划馆四楼、五楼））、古代艺术馆（福田区同心路6号）、东江游击队指挥部旧址（罗湖区南庆街13号）
+190301	广州博物馆	Guangzhou Museum	3	广东	广东省广州市越秀公园内镇海楼 	http://www.guangzhoumuseum.cn/		官网无法打开，地址和英文名均来自百度百科
+190302	广东民间工艺博物馆	GUANGDONG FOLK ARTS MUSEUM	3	广东	广州市中山七路	https://www.gzchenjiaci.com/MYwebsite/rc/my_index.htm		
+190401	广州艺术博物院	GUANGZHOU MUSEUM OF ART	4	广东	广州市麓湖路13号	https://www.gzam.com.cn/		
+190402	中国客家博物馆	HAKKA MUSEUM OF CHINA	4	广东	广东省梅州市梅江区东山大道2号	http://www.zgkjbwg.com/		
+190403	鸦片战争博物馆	THE OPIUM WAR MUSEUM	4	广东	广东省东莞市虎门镇解放路113号	http://www.ypzz.cn/f/index		
+190405	广东海上丝绸之路博物馆	Maritime Silk Road Museum of Guangdong	4	广东	广东省阳江市海陵岛试验区十里银滩  	https://www.msrmuseum.com/		
+200101	广西壮族自治区博物馆	the Museum of GuangxiZhuang Autonomous Region（壮语：GVANGJSIH BOUXCUENGH SWCIGIH BOZYUZGYANJ） 	1	广西	广西南宁市民族大道34号	http://www.gxmuseum.cn/		英文名来自百度百科
+200301	广西民族博物馆	ANTHROPOGY MUSEUM OF GUANGXI	3	广西	南宁市青秀山文化风景区	http://www.amgx.org/		
+200401	桂林博物馆	GUILIN MUSEUM	4	广西	桂林市临桂区平桂西路一院两馆内	http://www.guilinmuseum.org.cn/		
+210201	海南省博物馆	HAINAN MUSEUM	2	海南	中国海南省海口市琼山区国兴大道68号  	http://www.hainanmuseum.org/		
+210204	中国（海南）南海博物馆	CHINA (HAINAN) MUSEUM OF THE SOUTH CHINA SEA 	4	海南	海南省琼海市潭门镇博物馆路	http://www.nanhaimuseum.org/index.html		
+230101	自贡恐龙博物馆	Zigong Dinosaur Museum	1	四川	四川省自贡市大山铺恐龙化石群遗址	http://www.zdm.cn/		
+230102	三星堆博物馆	Sanxingdui Museum	1	四川	四川省广汉市西安路133号	http://sxd.cn/		
+230103	成都武侯祠博物馆	Chengdu Wuhou Shrine	1	四川	中国.成都市武侯祠大街231号	http://www.wuhouci.net.cn/default.html		
+230104	邓小平故居陈列馆	NULL	1	四川	四川省广安市广安区协兴镇牌坊村	NULL	NULL	
+230105	成都杜甫草堂博物馆	Du fu thatched cottage museum in chengdu	1	四川	成都市青羊区青华路37号	http://cddfct.com/index.php		
+230201	四川博物院	Sichuan Museum	2	四川	四川省成都市浣花溪历史文化风景区	NULL	gh_19489cb139ff	疑似是这个官网 https://www.scmuseum.cn/，但打不开，好像没有
+230202	金沙遗址博物馆	Jinsha Site Museum	2	四川	成都市青羊区金沙遗址路2号	http://www.jinshasitemuseum.com/		百度上是“成都金沙遗址博物馆”，这里去掉了成都二字，与官网名称符合
+230301	自贡市盐业历史博物馆	Zigong Salt Making Industry History Museum	3	四川	中国·四川·自贡市解放路173号	http://www.zgshm.cn/		
+230401	成都博物馆	Chengdu Museum	4	四川	四川省成都市小河街1号天府广场西侧	https://cdmuseum.com/		
+230402	四川省建川博物馆	Sichuan Museum of Jianchuan	4	四川	四川省成都市大邑县安仁镇	https://www.jc-museum.cn/	jc-museum	官网名称叫建川博物馆聚落(Museum Cluster Jianchuan)，包含四川建川博物馆、重庆建川博物馆、5·12抗震救灾纪念馆
+230403	5·12汶川特大地震纪念馆	5·12 Wenchuan Earthquake Memorial Museum	4	四川	四川北川羌族自治县曲山镇任家坪	NULL	jng512	
+230404	朱德同志故居纪念馆	NULL	4	四川	四川省仪陇县马鞍镇大湾路47号	NULL	NULL	
+240101	遵义会议纪念馆	NULL	1	贵州	贵州省遵义市红花岗区子尹路96号	http://www.zunyihy.cn/		
+240401	贵州省博物馆	Guizhou Provincial Museum	4	贵州	贵州省贵阳市观山湖区林城东路107号	NULL	gzsbwg	
+240402	贵州省民族博物馆	Guizhou Nationalities Museum	4	贵州	贵阳市迎宾大道遵义路筑城广场	NULL	gzsmzbowuguan	
+240403	四渡赤水纪念馆	NULL	4	贵州	贵州省遵义市习水县土城镇长征街	NULL	sdcsjing	
+250101	云南省博物馆	Yunnan Provincial Museum	1	云南	云南省昆明市广福路6393号	http://ynmuseum.org/index.html		
+250102	云南民族博物馆	Yunnan Nationalities Museum	1	云南	云南省昆明市西山区滇池路1503号	http://ynnmuseum.cn/		
+220101	重庆中国三峡博物馆	Chongqing China Three Gorges Museum	1	重庆	重庆市渝中区人民路236号	NULL	china3gmuseum	
+220201	重庆红岩革命历史博物馆	NULL	2	重庆	重庆市渝中区红岩村52号	NULL	hongyanlianxian	微信公众号账号主体是事业单位重庆红岩联线文化发展管理中心（重庆红岩革命历史博物馆）
+220301	重庆自然博物馆	Chongqing Museum of Natural History	3	重庆	重庆北碚区金华路398号	NULL	zrg_cq	
+220401	重庆三峡移民纪念馆	Chongqing Three Gorges Migration Memorial	4	重庆	重庆市万州区南滨路1469号	http://www.cqsxymjng.cn/		
+220402	大足石刻博物馆	NULL	4	重庆	重庆市	http://www.dzshike.com/dazu//html/1/		大足石刻研究院应该是最大的，其下是大足石刻博物馆，大足石刻艺术博物馆等
+260101	西藏博物馆	Tibet Museum	1	西藏	拉萨市罗布林卡东南角	NULL	gh_76505d96be4c	
+270101	陕西历史博物馆	Shaanxi History Museum	1	陕西	中国 · 陕西 · 西安市小寨东路91号	http://www.sxhm.com/		
+270102	秦始皇兵马俑博物馆	Emperor Qinshihuangs Mausoleum Site Museum	1	陕西	陕西省西安市临潼区	http://www.bmy.com.cn/	gh_0f2092812c2b/bmy1979	是秦始皇帝陵博物院的一个组成部分. 前微信号是主体是个人，2017年8月27日由“韩向阳”改名“秦始皇兵马俑博物馆”。后微信号主体是秦始皇帝陵博物院（秦始皇兵马俑博物馆）..
+270103	延安革命纪念馆	NULL	1	陕西	陕西省延安市宝塔区延河东岸	NULL	yagmjng	
+270104	汉阳陵博物馆	Han Yangling Museum	1	陕西	西安咸阳国际机场专线公路东段	http://www.hylae.com/		
+270105	西安碑林博物馆	Xian Beilin Museum	1	陕西	陕西省西安市碑林区三学街15号	http://www.beilin-museum.com/		
+270106	西安半坡博物馆	Xian Banpo Museum	1	陕西	西安市东郊半坡路155号	https://www.bpmuseum.com/		
+270201	西安博物院	Xian Museum	2	陕西	西安市友谊西路72号	https://www.xabwy.com/index.html		
+270301	宝鸡青铜器博物院	Baoji Bronze Ware Museum	3	陕西	陕西省宝鸡市滨河大道东段中华石鼓园内	http://bjqtm.com/		
+270302	西安大唐西市博物馆	Tang West Market Museum	3	陕西	陕西省西安市莲湖区劳动南路118号	http://www.dtxsmuseum.com/		
+280101	甘肃省博物馆	Gansu Provincial Museum	1	甘肃	甘肃省兰州市七里河区西津西路3号	http://www.gansumuseum.com/		
+280301	天水市博物馆	Tianshui Museum	3	甘肃	甘肃省天水市秦州区伏羲路110号 	http://tssbwg.com.cn/		
+280302	敦煌研究院	Dunhuang Academy China	3	甘肃	甘肃省酒泉市敦煌市	http://en.dha.ac.cn/index.html	icaves	官网迷惑
+280401	平凉市博物馆	Pingliang Museum	4	甘肃	平凉市龙隐寺公园内	http://www.plsbwg.com/		
+300101	固原博物馆	the Guyuan Museum of Ningxia	1	宁夏	宁夏固原市原州区西城路133号	http://nxgybwg.com/		
+300201	宁夏博物馆	Ningxia Museum	2	宁夏	宁夏回族自治区银川市金凤区人民广场东街	http://www.nxbwg.com/		
+290301	青海省博物馆	Qing Hai Province Museum	3	青海	青海省西宁市城西区西关大街58号	http://www.qhmuseum.cn/#/	wxid-vhksz784r1er22	官网卡死
+290401	中国藏医药文化博物馆	Tibetan Medicine Museum of China	4	青海	青海省西宁市生物园区经二路36号	NULL	qhzwhbwy	微信名：青海藏文化博物院，账号主体：青海藏医药文化博物馆
+310101	新疆维吾尔自治区博物馆	NULL	1	新疆	乌鲁木齐市沙依巴克区西北路581号	NULL	xinjiangmuseum	
+310301	吐鲁番博物馆	Turfan museum	3	新疆	吐鲁番市高昌区木纳尔路1268号	NULL	turfanmuseum	
