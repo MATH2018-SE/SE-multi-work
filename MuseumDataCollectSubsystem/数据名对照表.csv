@@ -1,0 +1,32 @@
+﻿数据项名,数据含义
+M_ID,博物馆编号。主码。省份两位数编号-批次两位-博物馆顺序编号两位
+M_Cname,博物馆中文名
+M_Ename,博物馆英文名
+M_Web,博物馆官网
+M_Pictures,博物馆图片
+M_Logo,博物馆logo
+M_Address,博物馆地址（省市区街道号）
+M_Batch,批次
+M_Introduction,介绍
+M_OpeningTime,博物馆开放时间。开馆时间-停止售票时间-截止入馆时间-闭馆时间。时间格式: hh:mm
+M_OpeningInformation,博物馆开放信息。一段文本描述。
+M_Booking,博物馆预约方式。一段文本描述。内部含有网站链接
+M_Ticket,博物馆门票价格。
+M_TicketInformation,博物馆门票信息。一段文本描述。包括购票须知，优惠政策。
+M_Triffic,交通指南。一段文本描述
+CM_Cname,子博物馆中文名
+CM_Ename,子博物馆英文名
+CM_Address,子博物馆地址
+CM_Introduction,子博物馆介绍
+C_ID,藏品编号。（优先按国家编号）
+C_Name,藏品名称
+C_Introduction,藏品介绍，一段文字
+C_Pictures,藏品图片
+CRM_In,藏品所在博物馆，具体到厅
+A_ID,活动编号
+A_Name,活动名称
+A_Theme,活动主题
+A_Type,"活动类型（展览活动-1, 学术活动-2，教育活动-3）"
+A_Information,活动介绍
+A_Date,活动时间
+ARM_In,活动地点。博物馆1，厅1，厅2，...；博物馆2...
