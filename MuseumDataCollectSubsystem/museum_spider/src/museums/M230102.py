@@ -123,7 +123,7 @@ def getMuseumData():
 
 def getCollectionsData():
     
-    # baseurl = "http://sxd.cn/"
+    baseurl = "http://sxd.cn/"
     collectionClass = [4,5,6,43]
     
     url2 = "http://www.sxd.cn/showinfojp.asp?id="
@@ -147,7 +147,7 @@ def getCollectionsData():
             # html = open("temp.html", 'r', encoding='utf-8').read()
             src = re.findall(r'src="(.*?[.jpg|.JPG|.png|.PNG])"', html)
             # print(src)
-            collectiondict["C_Pictures"] = src[0]
+            collectiondict["C_Pictures"] = baseurl + src[0]
 
             soup = BeautifulSoup(html, "html.parser")
             items = soup.find_all("td")
@@ -223,9 +223,11 @@ def askURL(url):
     try:
         res = requests.get(url, headers=head)
         res.raise_for_status()
-        res.encoding = res.apparent_encoding
+        res.encoding = 'gbk'
+        # open("temp.html",'w',encoding='gbk').write(res.content.decode('gbk','ignore'))
+        # html = open("temp.html",'r',encoding='gbk').read()
         html = res.text
-    
+        
     except requests.RequestException as e:
         print(e)
 
@@ -235,6 +237,6 @@ def askURL(url):
 
 
 if __name__ == "__main__":
-    getMuseumData()
-    # getCollectionsData()
+    # getMuseumData()
+    getCollectionsData()
     # getActivitiesData()
