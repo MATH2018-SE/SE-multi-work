@@ -73,7 +73,7 @@ def getData(baseurl):
                 content = getContent(link)
                 data.append(content)    #添加新闻内容（注：根据需要转字符串，列表会出现转义符）
                 
-                datalist.append(data)
+            datalist.append(data)
     print (datalist)
     return datalist
 
