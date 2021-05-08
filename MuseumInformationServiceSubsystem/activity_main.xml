@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FFEA8E"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_below="@id/image_bg"
+                android:id="@+id/layout_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#F8A1A4"
+                android:orientation="vertical"
+                />
+
+            <ImageView
+                android:id="@+id/image_bg"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="@mipmap/main1"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/layout_mywork"
+                android:layout_below="@id/layout_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:textColor="#212122"
+                    android:gravity="center"
+                    android:text="明日方舟角色推荐"
+                    android:background="#FFFFFF"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_work1"
+                android:layout_below="@id/layout_mywork"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="6dp"
+                android:paddingLeft="6dp"
+                android:background="#FFFFFF"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:padding="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="160dp"
+                    android:background="@mipmap/f1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@mipmap/f2"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="160dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/work1"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@mipmap/f3"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="160dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_work2"
+                android:layout_below="@id/layout_work1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10px"
+                android:orientation="horizontal"
+                android:paddingRight="6dp"
+                android:paddingLeft="6dp"
+                android:background="#FFFFFF"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:padding="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="160dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@mipmap/f4"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="160dp"
+                    android:background="@mipmap/f5"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="160dp"
+                    android:background="@mipmap/f6"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
