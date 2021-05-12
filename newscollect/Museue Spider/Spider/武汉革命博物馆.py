@@ -52,14 +52,6 @@ def getData(baseurl):
             #print(link)
             for i in link:
                 link = "http://www.whgmbwg.com/"+str(i)
-                #print(link)
-                #data.append(link)    #添加新闻链接
-            
-            #titles = re.findall(findTitle, item)
-            #data.append(titles)    #添加标题
-            
-            #time = re.findall(findTime, item)[num]
-            #data.append(time)    #添加时间
             
                 content = getContent(link)
                 #data.append(content)    #添加新闻内容（注：根据需要转字符串，列表会出现转义符）
