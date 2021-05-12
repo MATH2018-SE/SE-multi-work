@@ -55,7 +55,7 @@ def getMuseumData():
     html = askURL(baseurl)  # 保存获取到的网页源码
     # print(html[0:100])
     soup = BeautifulSoup(html, "html.parser")
-    open("temp/Opening.html", 'w', encoding='utf-8').write(str(html))
+    # open("temp/Opening.html", 'w', encoding='utf-8').write(str(html))
 
     # 开放时间
     for item in soup.find_all('body'):
@@ -68,11 +68,15 @@ def getMuseumData():
     time1 = re.findall(r'，(.*?)9', mm[0])
     time11 = re.findall(r'日(.*?)（', mm[0])
     time2 = re.findall(r'（(.*?)停', mm[0])
-    time = time0[0] + "：" + time01[0] + "-NULL-" + time2[0] + "\n" + time1[0] + "：" + time11[1] + "-NULL-" + time2[1] + "\n"
+    times = re.findall(r'(.*?)―', time01[0])
+    timee = re.findall(r'―(.*?)$', time01[0])
+    times1 = re.findall(r'(.*?)―', time11[1])
+    timee1 = re.findall(r'―(.*?)$', time11[1])
+    time = time0[0] + "：" + times[0] + "-NULL-" + time2[0] + "-" + timee[0] + "\n" + time1[0] + "：" + times1[0] + "-NULL-" + time2[1] + "-" + timee1[0] + "\n"
     datadict["M_OpeningTime"] = time
     datadict["M_OpeningInformation"] = mm[0]
-    debugPrint(time) # 是否输出（？） h
-    debugPrint(mm[0])
+    # debugPrint(time) # 是否输出（？） h
+    # debugPrint(mm[0])
 
 
     # logo 在背景图上，暂未爬取
@@ -84,7 +88,7 @@ def getMuseumData():
     s = ""
     for text in r.html.find('p.MsoNormal'):
         s = s + text.text
-        print(text.text)
+        # print(text.text)
     datadict["M_Introduction"] = s
 
     # 门票信息和开放信息
@@ -98,11 +102,11 @@ def getMuseumData():
         i = i+1
         if i>1 and i<29:
             s = s + OTInformation.text
-            print(OTInformation.text)
+            # print(OTInformation.text)
     datadict["M_TicketInformation"] = s
 
     jsondata = json.dumps(datadict, ensure_ascii=False, indent=4)
-    with open("../museums/M010402.json", 'w', encoding='utf-8') as f:
+    with open("museum_spider/museums/M010402.json", 'w', encoding='utf-8') as f:
         f.write(jsondata)
 
 
@@ -130,13 +134,13 @@ def getCollectionsData():
         findid = r'/cms(.*?)article'
         findname = r'target="_blank">(.*?)</a>'
         cid = re.findall(findid, link)
-        cid = str(cid)
+        cid = "C010402-" + cid[0]
         collectiondict["C_ID"] = cid
         cname = re.findall(findname, w)
         cname = str(cname)
         collectiondict["C_Name"] = cname
-        print(cid)
-        print(cname)
+        # print(cid)
+        # print(cname)
         web1 = 'http://www.cnfm.org.cn'
         a = web[0]
         # print(a)
@@ -156,14 +160,14 @@ def getCollectionsData():
                 m = m+1
                 collectiondict["C_Introduction"] = str(cip)
 
-        if i == 1:
-            jsondata = json.dumps(collectiondict, ensure_ascii=False, indent=4)
-            with open("../collections/C010402.json", 'w', encoding='utf-8') as f:
-                f.write(jsondata)
-        else:
+        '''if i == 1:'''
+        jsondata = json.dumps(collectiondict, ensure_ascii=False, indent=4)
+        with open("museum_spider/collections/C" + collectiondict["C_ID"] + ".json", 'w', encoding='utf-8') as f:
+            f.write(jsondata)
+        '''else:
             jsondata = json.dumps(collectiondict, ensure_ascii=False, indent=4)
             with open("../collections/C010402.json", 'a', encoding='utf-8') as f:
-                f.write(jsondata)
+                f.write(jsondata)'''
 pass
 
 def getActivitiesData():
@@ -177,6 +181,7 @@ def getActivitiesData():
     html = askURL(url)
     soup = BeautifulSoup(html, "html.parser")
     i = 0
+    zsid = 0
     for w in soup.find_all('p', attrs={'class': 'font16 txtcenter'}):
         i = i + 1
         w = str(w)
@@ -189,18 +194,22 @@ def getActivitiesData():
         link = str(link)
         findid = r'/cms(.*?)article'
         findname = r'target="_blank">(.*?)</a>'
-        aid = re.findall(findid, link)
-        aid = str(aid)
+        aid1 = re.findall(findid, link)
+        if len(aid1) == 0:
+            zsid += 1
+            aid = "010402-1-" + str(zsid)
+        else:
+            aid = "010402-1-" + aid1[0]
         activityDict["A_ID"] = aid
         aname = re.findall(findname, w)
+        activityDict["A_Name"] = aname[0]
         aname = str(aname)
-        activityDict["A_Name"] = aname
         cuowu = [' ']
         cuowu = str(cuowu)
         if aname == cuowu:
             continue
-        print(aid)
-        print(aname)
+        # print(aid)
+        # print(aname)
         web1 = 'http://www.cnfm.org.cn'
         a = web[0]
         # print(a)
@@ -209,7 +218,7 @@ def getActivitiesData():
             activityDict["A_Introduction"] = str(link) + "，VR全景连接"
         else:
             link = web1 + str(a)
-        print(link)
+        # print(link)
         chtml = askURL(link)
         soup = BeautifulSoup(chtml, "html.parser")
         m = 1
@@ -224,14 +233,14 @@ def getActivitiesData():
                 m = m + 1
                 activityDict["A_Introduction"] = str(aip)
 
-        if i == 1:
-            jsondata = json.dumps(activityDict, ensure_ascii=False, indent=4)
-            with open("../activities/A010402.json", 'w', encoding='utf-8') as f:
-                f.write(jsondata)
-        else:
+        '''if i == 1:'''
+        jsondata = json.dumps(activityDict, ensure_ascii=False, indent=4)
+        with open("museum_spider/activities/A" + activityDict["A_ID"] + ".json", 'w', encoding='utf-8') as f:
+            f.write(jsondata)
+        '''else:
             jsondata = json.dumps(activityDict, ensure_ascii=False, indent=4)
             with open("../activities/A010402.json", 'a', encoding='utf-8') as f:
-                f.write(jsondata)
+                f.write(jsondata)'''
 
 
 
@@ -273,6 +282,6 @@ def askPic(url):
 
 
 if __name__ == "__main__":
-    # getMuseumData()
-    # getCollectionsData()
+    getMuseumData()
+    getCollectionsData()
     getActivitiesData()
