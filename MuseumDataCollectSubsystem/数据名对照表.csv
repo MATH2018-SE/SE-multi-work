@@ -22,11 +22,12 @@ C_ID,藏品编号。（优先按国家编号）
 C_Name,藏品名称
 C_Introduction,藏品介绍，一段文字
 C_Pictures,藏品图片
-CRM_In,藏品所在博物馆，具体到厅
+CRM_In,藏品所在博物馆
 A_ID,活动编号
 A_Name,活动名称
 A_Theme,活动主题
 A_Type,"活动类型（展览活动-1, 学术活动-2，教育活动-3）"
 A_Information,活动介绍
+A_Places,活动举办地
 A_Date,活动时间
-ARM_In,活动地点。博物馆1，厅1，厅2，...；博物馆2...
+ARM_In,活动所在馆
