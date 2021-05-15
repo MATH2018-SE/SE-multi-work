@@ -2,3 +2,4 @@
 
 ![s](https://github.com/MATH2018-SE/SE-multi-project/tree/main/MuseumDataCollectSubsystem/img/s.png)
 
+![Image text](https://github.com/MATH2018-SE/SE-multi-project/blob/main/MuseumDataCollectSubsystem/img/s.png?raw=true)
