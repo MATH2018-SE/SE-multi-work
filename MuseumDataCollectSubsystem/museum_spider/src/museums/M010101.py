@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
 故宫博物院爬虫文件
@@ -458,11 +459,15 @@ def getActivitiesData():
                 activityDict["A_Introduction"] = str(alink) + "，VR全景连接"
             time = str(atime[z-1])
             # print(time)
+            findplace = r'<p>(.*?)</p>'
+            place = re.findall(findplace, str(time))
             time = time.replace(' ', '')
             findtime = r'</p><p>(.*?)<span'
             time = re.findall(findtime, time)
+            # print(place[0])
             # print(time[0])
             activityDict["A_Date"] = time[0]
+            activityDict["A_Places"] = place[0]
             activityDict["ARM_In"] = "010101"
             '''if z == 1 and page == 1:'''
             jsondata = json.dumps(activityDict, ensure_ascii=False, indent=4)
@@ -689,6 +694,6 @@ def askPic(url):
 
 
 if __name__ == "__main__":
-    getMuseumData()
-    getCollectionsData()
+    # getMuseumData()
+    # getCollectionsData()
     getActivitiesData()
