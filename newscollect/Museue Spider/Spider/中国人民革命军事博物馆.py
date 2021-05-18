@@ -19,12 +19,10 @@ def main():
 
 #新闻详情链接的规则
 findLink = re.compile(r'<a href="(.*?)">')    #创建正则表达式对象，表示规则（字符串模式）
-#新闻封面图片
-findImgSrc = re.compile(r'<img.*src="(.*?)"')    #re.S让换行符包含在字符里
+
 #新闻标题
 findTitle = re.compile(r'<h3>(.*)</h3>')
-#新闻简介
-findInq = re.compile(r'<p>(.*)</p>')
+
 #新闻发布时间
 findTime = re.compile(r'<span>(.*)</span>')
 
@@ -46,34 +44,23 @@ def getData(baseurl):
         soup = BeautifulSoup(html, "html.parser")
         for item in soup.find_all('div',class_="infoDynamicList"):    #查找符合要求的字符串，形成列表
             #print(item)   #测试查看新闻item全部信息
-            data = []    #保存一条新闻的所有信息
             item = str(item)
             #每一页每条新闻的详细的超链接
             for num in range(0,10):    #每页有十个新闻
+                data = {}    #保存一条新闻的所有信息
                 link = re.findall(findLink, item)[num]    #re库用来通过正则表达式查找指定字符串
-                #print("http://www.jb.mil.cn/zxdt"+link[1:])
                 link = "http://www.jb.mil.cn/zxdt"+link[1:]
-                data.append(link)    #添加新闻链接
                 
-                imgSrc = re.findall(findImgSrc, item)[num]
-                if len(imgSrc) !=0:
-                    imgSrc = "http://www.jb.mil.cn/zxdt"+imgSrc[1:]
-                    data.append(imgSrc)    #添加图片链接
-                else:
-                    data.append(" ")
                 titles = re.findall(findTitle, item)[num]
-                data.append(titles)    #添加标题
-                
-                inq = re.findall(findInq, item)[num]
-                data.append(inq)    #添加简介
+                data['title'] = titles    #添加标题
                 
                 time = re.findall(findTime, item)[num]
-                data.append(time)    #添加时间
+                data['time'] = time    #添加时间
                 
                 content = getContent(link)
-                data.append(content)    #添加新闻内容（注：根据需要转字符串，列表会出现转义符）
+                data['content'] = content    #添加新闻内容（注：根据需要转字符串，列表会出现转义符）
                 
-            datalist.append(data)
+                datalist.append(data)
     print (datalist)
     return datalist
 
