@@ -21,10 +21,10 @@ def main():
 findLink = re.compile(r'<a href="/(.*?)">')    #创建正则表达式对象，表示规则（字符串模式）
 
 #新闻标题
-findTitle = re.compile(r'">(.*)</a>')
+findTitle = re.compile(r'<h1>(.*)</h1>')
 
 #新闻发布时间
-findTime = re.compile(r'<span>(.*)</span>')
+findTime = re.compile(r'发布时间：(.*?)\xa0')
 
 #爬取新闻文本
 findContent = re.compile(r'<span>(.*?)</span>')
@@ -44,20 +44,32 @@ def getData(baseurl):
         soup = BeautifulSoup(html, "html.parser")
         for item in soup.find_all('div',class_="gmg_nullb"):    #查找符合要求的字符串，形成列表
             #print(item)   #测试查看新闻item全部信息
-            data = []    #保存一条新闻的所有信息
             item = str(item)
             #每一页每条新闻的详细的超链接
             link = re.findall(findLink, item)    #re库用来通过正则表达式查找指定字符串
             #print("http://www.whgmbwg.com/"+link)
             #print(link)
             for i in link:
+                data = {}    #保存一条新闻的所有信息
                 link = "http://www.whgmbwg.com/"+str(i)
+                #print(link)
+                inhtml = askURL(link)
+                insoup = BeautifulSoup(inhtml,"html.parser")
+                for initem in insoup.find_all('div',class_="gmg_nzw"):
+                    #print(initem)
+                    initem = str(initem)
+                    titles = re.findall(findTitle, initem)
+                    titles = ''.join(titles)
+                    data['title'] = titles    #添加标题
+                    time = re.findall(findTime, initem)
+                    time = ''.join(time)
+                    data['time'] = time    #添加时间
             
                 content = getContent(link)
-                #data.append(content)    #添加新闻内容（注：根据需要转字符串，列表会出现转义符）
+                data['content'] = content   #添加新闻内容（注：根据需要转字符串，列表会出现转义符）
             
-            #datalist.append(data)
-                print (content)
+                datalist.append(data)
+    print (datalist)
     return datalist
 
 
