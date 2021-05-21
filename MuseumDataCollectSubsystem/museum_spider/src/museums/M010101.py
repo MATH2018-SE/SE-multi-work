@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-故宫博物院爬虫文件
+故宫博物院爬虫文件（实验版）
 @author: HofCY
 @version 创建时间：2020.05.02
 https://www.dpm.org.cn/Home.html
@@ -30,7 +30,40 @@ from selenium import webdriver
 import socket
 import urllib.request
 from urllib import error
+import threading
+import time
 
+
+# 得到指定一个URL的网页内容
+def askURL(url):
+    # head = headers[0]
+    head = {
+        'User-Agent': 'Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)'
+    }
+    html = ""
+    try:
+        res = requests.get(url, headers=head)
+        res.raise_for_status()
+        res.encoding = res.apparent_encoding
+        html = res.text
+
+    except requests.RequestException as e:
+        print(e)
+
+    return html
+
+
+def askPic(url):
+    head = {
+        'User-Agent': 'Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)'
+    }
+    try:
+        res = requests.get(url, headers=head)
+        res.raise_for_status()
+        res.encoding = res.apparent_encoding
+    except requests.RequestException as e:
+        print(e)
+    return res
 
 
 def debugPrint(message):
@@ -215,19 +248,8 @@ def getMuseumData():
     with open("museum_spider/museums/M010101.json", 'w', encoding='utf-8') as f:
         f.write(jsondata)
 
-def getCollectionsData():
-    """
-    获得博物馆藏品信息
-    并生成数据字典
-    先自行保存在一个位置
-    :rtype: object
-    """
-    collectiondict = {}
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)'
-    }
-    session = HTMLSession()
-    url = 'https://www.dpm.org.cn/explore/collections.html'
+
+def wz(url):
     html = askURL(url)
     soup = BeautifulSoup(html, "html.parser")
     web = ""
@@ -239,141 +261,30 @@ def getCollectionsData():
     # print(link)
     web = link[0:23]
     # print(web)
-    web1 = 'http://www.dpm.org.cn'
     i = 0
     for lb in web:
-        i = i + 1
-        # print(i)
-        # print(a)
         lb = lb.replace('collection', 'searchs')
-        # print(a)
-        # if i == 2:
-            # break
-        # 调试不同藏品类别
-        baseurl = web1 + str(lb) + "?"  # 编辑不同类别藏品的基础网址
-        # print(baseurl)
-        parameters = {
-            "category_id": 90,
-            "p": 1
-        }  # 用于爬取总页数的参数
-        clink = baseurl + urlencode(parameters)
-        # print(clink)
-        html = askURL(clink)
-        soup = BeautifulSoup(html, "html.parser")
-        for w in soup.find_all('div', attrs={'class': 'pages'}):
-            w = str(w)
-            # print(w)
-            findpages = r'.html">(.*?)</a>'
-            pages = re.findall(findpages, w)
-            # print(pages)
-            pages = pages[len(pages)-1]
-            # print(pages)
-        for page in range(1, int(pages) + 1):
-            if page == 3:
-                break
-            # 控制调试页码
-            # 藏品过多，每类选取部分爬取
-            parameters = {
-                "category_id": 90,
-                "p": page
-            }  # 参数
-            clink = baseurl + urlencode(parameters)
-            try:
-                r = requests.get(clink, headers=headers)
-                r.raise_for_status()
-                r.encoding = r.apparent_encoding
-                cphtml = r.text
-            except:
-                # print(clink)
-                # print('链接失败')
-                continue
-            cpsoup = BeautifulSoup(cphtml, "html.parser")
-            z = 0
-            for cp in cpsoup.find_all('div', attrs={'class': 'table1'}):
-                z = z + 1
-                if z == 2:
-                    break
-                cp = str(cp)
-                # print(cp)
-                findid = r'id="(.*?)"'
-                cidh = re.findall(findid, cp)
-                # print(cidh)
-                # findname = r'target="_blank">(.*?)<'
-                # cnameh = re.findall(findname, cp)
-                # print(cnameh)
-                findlink = r'<a href="(.*?)"'
-                clink = re.findall(findlink, cp)
-                # print(clink)
-                cpsl = 0
-                for cid in cidh:
-                    cpsl = cpsl + 1
-                    # if cpsl == 2:
-                    # break
-                    cname = cpsoup.find_all('a', attrs={'id': cid})
-                    cname = str(cname)
-                    del_label = re.compile(r'<[^>]+>', re.S)
-                    cname = del_label.sub("", cname)
-                    cname = cname.replace('\n', '').replace(' ', '').replace(']', '').replace('[\r', '')
-                    # print(cname)
-                    cid = str(cid)
-                    # print(cid)
-                    cid = "010101-" + cid
-                    # print(cid)
-                    collectiondict["C_ID"] = cid
-                    collectiondict["C_Name"] = cname
-                    webc = web1 + clink[cpsl - 1]
-                    r = session.get(webc)
-                    aa = 0
-                    try:
-                        res = requests.get(webc, headers=headers)
-                        res.raise_for_status()
-                        res.encoding = res.apparent_encoding
-                        webchtml = r.text
-                    except:
-                        # print(webc)
-                        # print('链接失败')
-                        continue
-                    webcsoup = BeautifulSoup(webchtml, "html.parser")
-                    for text in r.html.find('div.content_edit'):
-                        aa = aa + 1
-                        text = text.text
-                        del_label = re.compile(r'<[^>]+>', re.S)
-                        text = del_label.sub("", text)
-                        text = text.replace('\u3000', '').replace(' ', '')
-                        s = text.split('\n')
-                        # print(s)
-                        text = re.findall(r'(.*?)TAG标签耗时：', text)
-                        if len(s) >= 2 and len(text) != 0:
-                            s[len(s) - 1] = text[0]
-                        elif len(s) == 1 and len(text) != 0:
-                            s[len(s) - 1] = text[0]
-                        # print(aa)
-                        # print(text)
-                        # print(s)
-                    collectiondict["C_Introduction"] = s
-                    for pic in webcsoup.find_all('div', attrs={'class': 'pic'}):
-                        pic = str(pic)
-                        # print(pic)
-                        findpic = r'src="(.*?)"'
-                        pic = re.findall(findpic, pic)
-                        cpic = str(pic[0])
-                        # print(cpic)
-                        if cpic.find('https://img.dpm.org.cn') == -1:
-                            cpic = 'https://img.dpm.org.cn' + cpic
-                        # 如果网址不完全，就补充全
-                        # print(cpic)
-                    res.close()
-                    collectiondict["C_Pictures"] = cpic
-                    collectiondict["CRM_In"] = "010101"
-                    '''if i == 1 and page == 1 and cpsl == 1:'''
-                    jsondata = json.dumps(collectiondict, ensure_ascii=False, indent=4)
-                    with open("museum_spider/collections/C" + collectiondict["C_ID"] + ".json", 'w', encoding='utf-8') as f:
-                        f.write(jsondata)
-                    '''else:
-                        jsondata = json.dumps(collectiondict, ensure_ascii=False, indent=4)
-                        with open("../collections/C" + collectiondict["C_ID"] + ".json", 'a', encoding='utf-8') as f:
-                            f.write(jsondata)'''
-            r.close()
+        web[i] = lb
+        i += 1
+    return(web)
+
+cpurl = 'https://www.dpm.org.cn/explore/collections.html'
+link_list = wz(cpurl)
+
+def getCollectionsData():
+    """
+    获得博物馆藏品信息
+    并生成数据字典
+    先自行保存在一个位置
+    :rtype: object
+    """
+    start = time.time()
+    for i in range(1, 24):  # Thread1-23
+        thread = myThread('Thread-' + str(i), i)  # 每一个线程处理200个网站
+        thread.start()
+    end = time.time()
+    # print("总体运行时间：", end - start)
+
 
 
 
@@ -659,41 +570,159 @@ def getActivitiesData():
     pass
 
 
-# 得到指定一个URL的网页内容
-def askURL(url):
-    # head = headers[0]
-    head = {
+
+def crawler(threadName, link_range):
+    collectiondict = {}
+    headers = {
         'User-Agent': 'Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)'
     }
-    html = ""
+    session = HTMLSession()
     try:
-        res = requests.get(url, headers=head)
-        res.raise_for_status()
-        res.encoding = res.apparent_encoding
-        html = res.text
+        lb = link_list[link_range-1]
+        web1 = "http://www.dpm.org.cn"
+        # print(a)
+        # if i == 2:
+        # break
+        # 调试不同藏品类别
+        baseurl = web1 + str(lb) + "?"  # 编辑不同类别藏品的基础网址
+        # print(baseurl)
+        parameters = {
+            "category_id": 90,
+            "p": 1
+        }  # 用于爬取总页数的参数
+        clink = baseurl + urlencode(parameters)
+        # print(clink)
+        html = askURL(clink)
+        soup = BeautifulSoup(html, "html.parser")
+        for w in soup.find_all('div', attrs={'class': 'pages'}):
+            w = str(w)
+            # print(w)
+            findpages = r'.html">(.*?)</a>'
+            pages = re.findall(findpages, w)
+            # print(pages)
+            pages = pages[len(pages) - 1]
+            # print(pages)
+        for page in range(1, int(pages) + 1):
+            if page == 3:
+                break
+            # 控制调试页码
+            # 藏品过多，每类选取部分爬取
+            parameters = {
+                "category_id": 90,
+                "p": page
+            }  # 参数
+            clink = baseurl + urlencode(parameters)
+            try:
+                r = requests.get(clink, headers=headers, timeout=5)
+                r.raise_for_status()
+                r.encoding = r.apparent_encoding
+                cphtml = r.text
+            except:
+                # print(clink)
+                # print('链接失败')
+                continue
+            cpsoup = BeautifulSoup(cphtml, "html.parser")
+            z = 0
+            for cp in cpsoup.find_all('div', attrs={'class': 'table1'}):
+                z = z + 1
+                if z == 2:
+                    break
+                cp = str(cp)
+                # print(cp)
+                findid = r'id="(.*?)"'
+                cidh = re.findall(findid, cp)
+                # print(cidh)
+                # findname = r'target="_blank">(.*?)<'
+                # cnameh = re.findall(findname, cp)
+                # print(cnameh)
+                findlink = r'<a href="(.*?)"'
+                clink = re.findall(findlink, cp)
+                # print(clink)
+                cpsl = 0
+                for cid in cidh:
+                    cpsl = cpsl + 1
+                    # if cpsl == 6:
+                        # break
+                    # 藏品数量太多，选取前面几个爬取
+                    cname = cpsoup.find_all('a', attrs={'id': cid})
+                    cname = str(cname)
+                    del_label = re.compile(r'<[^>]+>', re.S)
+                    cname = del_label.sub("", cname)
+                    cname = cname.replace('\n', '').replace(' ', '').replace(']', '').replace('[\r', '')
+                    # print(cname)
+                    cid = str(cid)
+                    # print(cid)
+                    cid = "010101-" + cid
+                    # print(cid)
+                    collectiondict["C_ID"] = cid
+                    collectiondict["C_Name"] = cname
+                    webc = web1 + clink[cpsl - 1]
+                    r = session.get(webc)
+                    aa = 0
+                    try:
+                        res = requests.get(webc, headers=headers, timeout=5)
+                        res.raise_for_status()
+                        res.encoding = res.apparent_encoding
+                        webchtml = r.text
+                    except:
+                        # print(webc)
+                        # print('链接失败')
+                        continue
+                    webcsoup = BeautifulSoup(webchtml, "html.parser")
+                    for text in r.html.find('div.content_edit'):
+                        aa = aa + 1
+                        text = text.text
+                        del_label = re.compile(r'<[^>]+>', re.S)
+                        text = del_label.sub("", text)
+                        text = text.replace('\u3000', '').replace(' ', '')
+                        s = text.split('\n')
+                        # print(s)
+                        text = re.findall(r'(.*?)TAG标签耗时：', text)
+                        if len(s) >= 2 and len(text) != 0:
+                            s[len(s) - 1] = text[0]
+                        elif len(s) == 1 and len(text) != 0:
+                            s[len(s) - 1] = text[0]
+                        # print(aa)
+                        # print(text)
+                        # print(s)
+                    collectiondict["C_Introduction"] = s
+                    for pic in webcsoup.find_all('div', attrs={'class': 'pic'}):
+                        pic = str(pic)
+                        # print(pic)
+                        findpic = r'src="(.*?)"'
+                        pic = re.findall(findpic, pic)
+                        cpic = str(pic[0])
+                        # print(cpic)
+                        if cpic.find('https://img.dpm.org.cn') == -1:
+                            cpic = 'https://img.dpm.org.cn' + cpic
+                        # 如果网址不完全，就补充全
+                        # print(cpic)
+                    collectiondict["C_Pictures"] = cpic
+                    collectiondict["CRM_In"] = "010101"
+                    '''if i == 1 and page == 1 and cpsl == 1:'''
+                    jsondata = json.dumps(collectiondict, ensure_ascii=False, indent=4)
+                    with open("museum_spider/collections/C" + collectiondict["C_ID"] + ".json", 'w',encoding='utf-8') as f:
+                        f.write(jsondata)
+        # print(threadName, link_list[i], re.status_code)
+    except Exception as e:
+        print('error:', e)
 
-    except requests.RequestException as e:
-        print(e)
+class myThread(threading.Thread): #继承threading.Thread类
+    def __init__(self, name, link_range):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.link_range = link_range
+    def run(self):  #重写成员方法
+        # print ("Starting " + self.name)
+        crawler(self.name, self.link_range)
+        # print ("Exiting " + self.name)
 
-    return html
 
-
-def askPic(url):
-    head = {
-        'User-Agent': 'Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)'
-    }
-    try:
-        res = requests.get(url, headers=head)
-        res.raise_for_status()
-        res.encoding = res.apparent_encoding
-    except requests.RequestException as e:
-        print(e)
-    return res
 
 
 
 
 if __name__ == "__main__":
-    # getMuseumData()
-    # getCollectionsData()
+    getMuseumData()
+    getCollectionsData()
     getActivitiesData()
