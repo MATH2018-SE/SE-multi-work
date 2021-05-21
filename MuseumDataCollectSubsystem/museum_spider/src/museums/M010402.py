@@ -26,7 +26,6 @@ from bs4 import BeautifulSoup
 import re
 import json
 from requests_html import HTMLSession
-from aip import AipOcr
 
 
 # APP_ID='24072189'
@@ -81,6 +80,7 @@ def getMuseumData():
 
 
     # logo 在背景图上，暂未爬取
+    datadict["M_Logo"] = "暂无信息"
 
     # introduction
     session = HTMLSession()
